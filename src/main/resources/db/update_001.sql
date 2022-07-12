@@ -14,15 +14,6 @@ CREATE TABLE IF NOT EXISTS employee
     hiredate   TIMESTAMP
 );
 
-CREATE TABLE if not exists employee_person
-(
-    employee_id integer NOT NULL,
-    person_id   integer NOT NULL,
-    PRIMARY KEY (employee_id, person_id),
-    FOREIGN KEY (employee_id) REFERENCES employee,
-    FOREIGN KEY (person_id) REFERENCES person
-);
-
 
 drop table person cascade;
 drop table employee cascade;
